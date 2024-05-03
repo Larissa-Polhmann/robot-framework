@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-01T16:59:48.952805" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\larip\OneDrive\Documentos\project-robotframework\tests\test-cases\login.robot">
+<kw name="Initiate Browser" owner="common_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-01T16:59:49.134467" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-01T16:59:49.134467" elapsed="2.021249"/>
+</kw>
+<kw name="Disable Screenshots" owner="common_resources">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>${TEMPDIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-05-01T16:59:51.156715" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-01T16:59:51.155716" elapsed="0.002001"/>
+</kw>
+<status status="PASS" start="2024-05-01T16:59:49.133472" elapsed="2.024245"/>
+</kw>
+<test id="s1-t1" name="Test Case 01 - Successfully logs in" line="16">
+<kw name="Enter the correct username" owner="login_resources">
+<msg time="2024-05-01T16:59:51.158716" level="FAIL">Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.</msg>
+<status status="FAIL" start="2024-05-01T16:59:51.158716" elapsed="0.000000">Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.</status>
+</kw>
+<kw name="Enter the correct password" owner="login_resources">
+<status status="NOT RUN" start="2024-05-01T16:59:51.158716" elapsed="0.000000"/>
+</kw>
+<kw name="Click on login" owner="login_resources">
+<status status="NOT RUN" start="2024-05-01T16:59:51.159715" elapsed="0.000000"/>
+</kw>
+<doc>Verifies successful login with valid credentials.</doc>
+<tag>login</tag>
+<status status="FAIL" start="2024-05-01T16:59:51.157717" elapsed="0.001998">Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.</status>
+</test>
+<kw name="Terminate Browser" owner="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-05-01T16:59:51.160719" elapsed="6.192021"/>
+</kw>
+<status status="PASS" start="2024-05-01T16:59:51.160719" elapsed="6.192021"/>
+</kw>
+<doc>Test cases for the login page of the system.
+This test suite verifies if users can successfully log in
+using valid and invalid credentials.</doc>
+<status status="FAIL" start="2024-05-01T16:59:48.953939" elapsed="8.398801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-01T16:59:49.122114" level="WARN">Error in file 'C:\Users\larip\OneDrive\Documentos\project-robotframework\tests\resources\common_resources.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
