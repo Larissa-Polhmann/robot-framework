@@ -11,7 +11,6 @@ Before running the tests, make sure you have installed:
 
 ## Installation
 1. Clone this repository: git@github.com:Larissa-Polhmann/robot-framework.git
-2. Install dependencies: pip install -r requirements.txt
 
 ## Project Structure
 - **tests**: Contains all test cases written in the Robot Framework.
