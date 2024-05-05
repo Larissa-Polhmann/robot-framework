@@ -1,63 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-01T16:59:48.952805" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-04T23:28:59.193105" rpa="false" schemaversion="5">
 <suite id="s1" name="Login" source="C:\Users\larip\OneDrive\Documentos\project-robotframework\tests\test-cases\login.robot">
 <kw name="Initiate Browser" owner="common_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-01T16:59:49.134467" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2024-05-04T23:28:59.403125" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-01T16:59:49.134467" elapsed="2.021249"/>
+<status status="PASS" start="2024-05-04T23:28:59.403125" elapsed="2.181842"/>
 </kw>
 <kw name="Disable Screenshots" owner="common_resources">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>${TEMPDIR}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-05-01T16:59:51.156715" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-04T23:29:01.585965" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-01T16:59:51.155716" elapsed="0.002001"/>
+<status status="PASS" start="2024-05-04T23:29:01.584967" elapsed="0.000998"/>
 </kw>
-<status status="PASS" start="2024-05-01T16:59:49.133472" elapsed="2.024245"/>
+<status status="PASS" start="2024-05-04T23:28:59.403125" elapsed="2.183838"/>
 </kw>
-<test id="s1-t1" name="Test Case 01 - Successfully logs in" line="16">
+<test id="s1-t1" name="Successfully logs in" line="17">
 <kw name="Enter the correct username" owner="login_resources">
-<msg time="2024-05-01T16:59:51.158716" level="FAIL">Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.</msg>
-<status status="FAIL" start="2024-05-01T16:59:51.158716" elapsed="0.000000">Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.</status>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:01.588967" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:01.588967" elapsed="0.097545"/>
+</kw>
+<status status="PASS" start="2024-05-04T23:29:01.587966" elapsed="0.098546"/>
 </kw>
 <kw name="Enter the correct password" owner="login_resources">
-<status status="NOT RUN" start="2024-05-01T16:59:51.158716" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:01.687514" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:01.687514" elapsed="0.079504"/>
+</kw>
+<status status="PASS" start="2024-05-04T23:29:01.687514" elapsed="0.079504"/>
 </kw>
 <kw name="Click on login" owner="login_resources">
-<status status="NOT RUN" start="2024-05-01T16:59:51.159715" elapsed="0.000000"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:01.768016" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:01.768016" elapsed="0.081054"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[@class='title'][contains(.,'Products')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-04T23:29:01.849070" elapsed="0.021921"/>
+</kw>
+<status status="PASS" start="2024-05-04T23:29:01.768016" elapsed="0.102975"/>
 </kw>
 <doc>Verifies successful login with valid credentials.</doc>
 <tag>login</tag>
-<status status="FAIL" start="2024-05-01T16:59:51.157717" elapsed="0.001998">Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.</status>
+<status status="PASS" start="2024-05-04T23:29:01.586963" elapsed="0.285034"/>
+</test>
+<test id="s1-t2" name="Locked out user" line="26">
+<kw name="Enter the incorrect username" owner="login_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:01.873999" level="INFO">Clicking element '//button[@id='react-burger-menu-btn']'.</msg>
+<arg>${MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:01.873999" elapsed="0.042911"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-04T23:29:01.916910" elapsed="0.246625"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:02.163535" level="INFO">Clicking element '//a[contains(.,'Logout')]'.</msg>
+<arg>${LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:02.163535" elapsed="0.031370"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:02.194905" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME}</arg>
+<arg>locked_out_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:02.194905" elapsed="0.061827"/>
+</kw>
+<status status="PASS" start="2024-05-04T23:29:01.873030" elapsed="0.383702"/>
+</kw>
+<kw name="Enter the correct password" owner="login_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:02.257737" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:02.257737" elapsed="0.057309"/>
+</kw>
+<status status="PASS" start="2024-05-04T23:29:02.256732" elapsed="0.058314"/>
+</kw>
+<kw name="Click on login and check the message ${MESSAGE_LOCKED_USER}" owner="login_resources" source_name="Click on login and check the message ${MESSAGE_LOCKED_USER}">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-04T23:29:02.315520" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-04T23:29:02.315520" elapsed="0.035814"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE_LOCKED_USER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-04T23:29:02.351334" elapsed="0.012803"/>
+</kw>
+<status status="PASS" start="2024-05-04T23:29:02.315520" elapsed="0.049619"/>
+</kw>
+<doc>Verifies error message when attempting login with invalid credentials.</doc>
+<tag>login_error</tag>
+<status status="PASS" start="2024-05-04T23:29:01.871997" elapsed="0.493315"/>
 </test>
 <kw name="Terminate Browser" owner="common_resources" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-01T16:59:51.160719" elapsed="6.192021"/>
+<status status="PASS" start="2024-05-04T23:29:02.366326" elapsed="6.212720"/>
 </kw>
-<status status="PASS" start="2024-05-01T16:59:51.160719" elapsed="6.192021"/>
+<status status="PASS" start="2024-05-04T23:29:02.365312" elapsed="6.213734"/>
 </kw>
 <doc>Test cases for the login page of the system.
 This test suite verifies if users can successfully log in
 using valid and invalid credentials.</doc>
-<status status="FAIL" start="2024-05-01T16:59:48.953939" elapsed="8.398801"/>
+<status status="PASS" start="2024-05-04T23:28:59.195105" elapsed="9.383941"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">login_error</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-01T16:59:49.122114" level="WARN">Error in file 'C:\Users\larip\OneDrive\Documentos\project-robotframework\tests\resources\common_resources.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

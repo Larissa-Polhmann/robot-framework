@@ -2081,25 +2081,25 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[0,0,8399],[],[[5,0,6,[7],[0,2204,2,8],[[0,9,10,0,0,0,0,0,[0,2205,0],[[2205,5,8]]],[0,11,10,0,0,0,0,0,[3,2205,0],[]],[0,12,10,0,0,0,0,0,[3,2206,0],[]]]]],[[1,13,14,0,0,0,0,0,[1,179,2024],[[0,15,16,0,17,18,0,0,[1,180,2021],[[180,2,19]]],[0,20,14,0,0,0,0,0,[1,2202,2],[[0,21,16,0,22,23,0,0,[1,2203,0],[]]]]]],[2,24,14,0,0,0,0,0,[1,2207,6192],[[0,25,16,0,26,0,0,0,[1,2207,6192],[]]]]],[1,0,1,0]];
+window.output["suite"] = [1,2,3,4,[],[1,0,9384],[],[[5,0,6,[7],[1,2392,285],[[0,8,9,0,0,0,0,0,[1,2393,99],[[0,10,11,0,12,13,0,0,[1,2394,98],[[2394,2,14]]]]],[0,15,9,0,0,0,0,0,[1,2493,80],[[0,10,11,0,12,16,0,0,[1,2493,80],[[2493,2,17]]]]],[0,18,9,0,0,0,0,0,[1,2573,103],[[0,19,11,0,20,21,0,0,[1,2573,81],[[2573,2,22]]],[0,23,11,0,24,25,0,0,[1,2654,22],[]]]]]],[26,0,27,[28],[1,2677,493],[[0,29,9,0,0,0,0,0,[1,2678,384],[[0,30,11,0,31,32,0,0,[1,2679,43],[[2679,2,33]]],[0,23,11,0,24,34,0,0,[1,2722,247],[]],[0,30,11,0,31,34,0,0,[1,2969,31],[[2969,2,35]]],[0,10,11,0,12,36,0,0,[1,3000,62],[[3000,2,37]]]]],[0,15,9,0,0,0,0,0,[1,3062,58],[[0,10,11,0,12,16,0,0,[1,3063,57],[[3063,2,17]]]]],[0,38,9,0,0,0,0,0,[1,3121,50],[[0,19,11,0,20,21,0,0,[1,3121,36],[[3121,2,22]]],[0,23,11,0,24,39,0,0,[1,3156,13],[]]]]]]],[[1,40,41,0,0,0,0,0,[1,208,2184],[[0,42,11,0,43,44,0,0,[1,208,2182],[[208,2,45]]],[0,46,41,0,0,0,0,0,[1,2390,1],[[0,47,11,0,48,49,0,0,[1,2391,0],[]]]]]],[2,50,41,0,0,0,0,0,[1,3170,6214],[[0,51,11,0,52,0,0,0,[1,3171,6213],[]]]]],[2,2,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Login","*C:\\Users\\larip\\OneDrive\\Documentos\\project-robotframework\\tests\\test-cases\\login.robot","*login.robot","*<p>Test cases for the login page of the system. This test suite verifies if users can successfully log in using valid and invalid credentials.\x3c/p>","*Test Case 01 - Successfully logs in","*<p>Verifies successful login with valid credentials.\x3c/p>","*login","*Keyword 'login_resources.Enter the correct username' expected 1 argument, got 0.","*Enter the correct username","*login_resources","*Enter the correct password","*Click on login","*Initiate Browser","*common_resources","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${URL}    chrome","*Opening browser 'chrome' to base url '<a href=\"https://www.saucedemo.com/\">https://www.saucedemo.com/\x3c/a>'.","*Disable Screenshots","*Set Screenshot Directory","*<p>Sets the directory for captured screenshots.\x3c/p>","*${TEMPDIR}","*Terminate Browser","*Close All Browsers","*<p>Closes all open browsers and resets the browser cache.\x3c/p>","*Error in file 'C:\\Users\\larip\\OneDrive\\Documentos\\project-robotframework\\tests\\resources\\common_resources.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead."]);
+window.output["strings"] = window.output["strings"].concat(["*","*Login","*C:\\Users\\larip\\OneDrive\\Documentos\\project-robotframework\\tests\\test-cases\\login.robot","*login.robot","*<p>Test cases for the login page of the system. This test suite verifies if users can successfully log in using valid and invalid credentials.\x3c/p>","*Successfully logs in","*<p>Verifies successful login with valid credentials.\x3c/p>","*login","*Enter the correct username","*login_resources","*Input Text","*SeleniumLibrary","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${USERNAME}    standard_user","*Typing text 'standard_user' into text field 'id=user-name'.","*Enter the correct password","*${PASSWORD}    secret_sauce","*Typing text 'secret_sauce' into text field 'id=password'.","*Click on login","*Click Button","*<p>Clicks the button identified by <code>locator\x3c/code>.\x3c/p>","*${BTN_LOGIN}","*Clicking button 'id=login-button'.","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*//span[@class='title'][contains(.,'Products')]","*Locked out user","*<p>Verifies error message when attempting login with invalid credentials.\x3c/p>","*login_error","*Enter the incorrect username","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*${MENU}","*Clicking element '//button[@id='react-burger-menu-btn']'.","*${LOGOUT}","*Clicking element '//a[contains(.,'Logout')]'.","*${USERNAME}    locked_out_user","*Typing text 'locked_out_user' into text field 'id=user-name'.","*Click on login and check the message ${MESSAGE_LOCKED_USER}","*${MESSAGE_LOCKED_USER}","*Initiate Browser","*common_resources","*Open Browser","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${URL}    chrome","*Opening browser 'chrome' to base url '<a href=\"https://www.saucedemo.com/\">https://www.saucedemo.com/\x3c/a>'.","*Disable Screenshots","*Set Screenshot Directory","*<p>Sets the directory for captured screenshots.\x3c/p>","*${TEMPDIR}","*Terminate Browser","*Close All Browsers","*<p>Closes all open browsers and resets the browser cache.\x3c/p>"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:00","fail":1,"label":"All Tests","pass":0,"skip":0}],[{"elapsed":"00:00:00","fail":1,"label":"login","pass":0,"skip":0}],[{"elapsed":"00:00:08","fail":1,"id":"s1","label":"Login","name":"Login","pass":0,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:01","fail":0,"label":"All Tests","pass":2,"skip":0}],[{"elapsed":"00:00:00","fail":0,"label":"login","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"login_error","pass":1,"skip":0}],[{"elapsed":"00:00:09","fail":0,"id":"s1","label":"Login","name":"Login","pass":2,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [[168,3,27]];
+window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1714593588954;
+window.output["baseMillis"] = 1714876139195;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 8419;
+window.output["generated"] = 9408;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;

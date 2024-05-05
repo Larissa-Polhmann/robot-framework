@@ -1,10 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    OperatingSystem
+Library    BuiltIn
+Resource    ../locators/locators.robot
 
 *** Variables ***
 ${URL}    https://www.saucedemo.com/
-${YAML_FILE}    ${CURDIR}/../tests/data/credentials.yaml
 
 *** Keywords ***
 Initiate Browser
@@ -17,21 +17,8 @@ Terminate Browser
 Disable Screenshots
     Set Screenshot Directory    ${TEMPDIR}
 
-Load Credentials From YAML
-    ${credentials}=    Get File    ${YAML_FILE}
-    [Return]    ${credentials}
-
-Login with Username
-    [Arguments]    ${username}
-    Input Text    //input[contains(@id,'user-name')]    ${username}
-
-Login with Password
-    [Arguments]    ${password}
-    Input Text    //input[@id='password']    ${password}
-    Click Button    //input[@id='login-button']
-
-Login with Locked User
-    [Arguments]    ${credentials}
-    Input Text    //input[contains(@id,'user-name')]    ${credentials['incorrect_username']}
-    Input Text    //input[@id='password']    ${credentials['incorrect_password']}
-    Click Button    //input[@id='login-button']
+Perform the login
+    Input Text    ${USERNAME}    standard_user
+    Input Text    ${PASSWORD}    secret_sauce
+    Click Button    ${BTN_LOGIN}
+    Wait Until Element Is Visible    //span[@class='title'][contains(.,'Products')]
